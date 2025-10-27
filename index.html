@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">
+                <img src="" alt="" class="brand-logo" aria-hidden="true" />
+                <span class="brand-title">Portfolio</span>
+            </a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main container">
+        <section id="home" class="hero">
+            <h1>Welcome to My Website</h1>
+            <p>Simple responsive site shell using styles.css for styling.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>Describe your site or business here.</p>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Services</h2>
+            <p>List key services or features.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>How visitors can reach you.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>&copy; <span id="year"></span> My Website</small>
+        </div>
+    </footer>
+
+    <script>
+        // Minimal accessible nav toggle
+        (function () {
+            const btn = document.querySelector('.nav-toggle');
+            const nav = document.getElementById('primary-nav');
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            if (!btn || !nav) return;
+            btn.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                nav.classList.toggle('open');
+            });
+        })();
+    </script>
+</body>
+</html>
