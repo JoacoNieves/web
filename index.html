@@ -1,71 +1,89 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Portfolio</title>
+    <title>Portafolio de Joaquin Nieves</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a class="brand" href="/">
-                <img src="" alt="" class="brand-logo" aria-hidden="true" />
-                <span class="brand-title">Portfolio</span>
+            <a class="brand" href="#home">
+                <span class="brand-title">Joaquin Nieves</span>
             </a>
 
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
                 <span class="hamburger"></span>
             </button>
 
             <nav id="primary-nav" class="primary-nav" role="navigation">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre mí</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="site-main container">
-        <section id="home" class="hero">
-            <h1>Welcome to My Website</h1>
-            <p>Simple responsive site shell using styles.css for styling.</p>
+    <main class="site-main">
+        <section id="home" class="hero container">
+            <p class="hero-subtitle">Joaquin Nieves</p>
+            <h1 class="hero-title">Programador Full Stack</h1>
+            <p class="hero-text">Creo experiencias digitales claras y funcionales para proyectos que buscan crecer en la web.</p>
+            <a class="button" href="#contact">Hablemos</a>
         </section>
 
-        <section id="about" class="section">
-            <h2>About</h2>
-            <p>Describe your site or business here.</p>
+        <section id="about" class="section container">
+            <h2>Sobre mí</h2>
+            <p>Desarrollador apasionado por el código limpio y las interfaces accesibles. Trabajo con equipos para transformar ideas en productos digitales listos para producción.</p>
         </section>
 
-        <section id="services" class="section">
-            <h2>Services</h2>
-            <p>List key services or features.</p>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>How visitors can reach you.</p>
+        <section id="services" class="section container">
+            <h2>Servicios</h2>
+            <ul class="feature-list">
+                <li>
+                    <h3>Aplicaciones Web</h3>
+                    <p>Diseño y desarrollo soluciones escalables con tecnologías modernas.</p>
+                </li>
+                <li>
+                    <h3>Integraciones</h3>
+                    <p>Conecto herramientas y APIs para automatizar procesos y mejorar flujos de trabajo.</p>
+                </li>
+                <li>
+                    <h3>Soporte continuo</h3>
+                    <p>Acompañamiento para mantener y evolucionar tus proyectos en producción.</p>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <small>&copy; <span id="year"></span> My Website</small>
+        <div class="container footer-inner">
+            <section id="contact" class="contact">
+                <h2>Contacto</h2>
+                <p>¿Tienes un proyecto en mente? Escríbeme y conversemos.</p>
+                <a class="button button-secondary" href="mailto:joaquin@example.com">Contactar</a>
+            </section>
+            <small class="copyright">&copy; <span id="year"></span> My Website</small>
         </div>
     </footer>
 
     <script>
-        // Minimal accessible nav toggle
         (function () {
             const btn = document.querySelector('.nav-toggle');
             const nav = document.getElementById('primary-nav');
             const yearEl = document.getElementById('year');
-            if (yearEl) yearEl.textContent = new Date().getFullYear();
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
 
-            if (!btn || !nav) return;
+            if (!btn || !nav) {
+                return;
+            }
+
             btn.addEventListener('click', function () {
                 const expanded = this.getAttribute('aria-expanded') === 'true';
                 this.setAttribute('aria-expanded', String(!expanded));
