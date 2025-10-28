@@ -1,0 +1,75 @@
+body {
+    text-align: center;
+    background-image: url('background.png');
+
+}
+ 
+#services {
+    padding: 20px;
+}
+
+#contact {
+    padding: 20px;
+}
+.site-header {
+    text-align: justify;
+}
+
+/*Botón estilizado*/
+button {
+    background-color: #007bff; /* color principal */
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* tono más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* pequeño efecto de elevación */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#home {
+    padding: 20px;
+}
+
+/* Hace que el encabezado sea horizontal y centrado */
+.header-inner {
+    display: flex;
+    justify-content: center; /* centra todo el contenido */
+    align-items: center;
+    gap: 40px; /* espacio entre "Portfolio" y las opciones */
+    padding: 20px 0;
+}
+
+/* Elimina los estilos de lista por defecto y hace los ítems horizontales */
+.nav-list {
+    display: flex;
+    gap: 25px; /* espacio entre los enlaces */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo básico para los enlaces */
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Alinea el texto del título con el menú */
+.brand-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
